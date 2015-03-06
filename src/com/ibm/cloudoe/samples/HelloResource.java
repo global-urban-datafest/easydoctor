@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 
+
 @Path("/hello")
 public class HelloResource {
 
@@ -17,7 +18,12 @@ public class HelloResource {
 		// String envServices = System.getenv("VCAP_SERVICES");
 		// JSONObject sysEnv = new JSONObject(System.getenv());
 
+
+
+
 		return "Hi World! LALALALALA";
 
 	}
 }
+
+
