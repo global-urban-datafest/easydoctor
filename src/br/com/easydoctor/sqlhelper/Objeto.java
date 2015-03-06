@@ -6,7 +6,7 @@ package br.com.easydoctor.sqlhelper;
 
 /**
  *
- * @author André A. Matecki
+ * @author Andre A. Matecki
  */
 public class Objeto<T> {
 

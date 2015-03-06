@@ -71,8 +71,11 @@ public class SqlHelper {
 			        list.add(obj);
 				}
 	    	}
-		} catch (InstantiationException | IllegalAccessException e) {
+		} catch (InstantiationException e) {
 
+		}
+		catch (IllegalAccessException  e) {
+			// TODO: handle exception
 		}
 		return list;
 
@@ -127,7 +130,7 @@ public class SqlHelper {
 
 
     private ArrayList<HashMap<String, Object>> executeComand(String cmd, Parametro[] parametros){
-    	ArrayList<HashMap<String, Object>> result = new ArrayList<>();
+    	ArrayList<HashMap<String, Object>> result = new ArrayList<HashMap<String,Object>>();
     	abrirConexao();
     	PreparedStatement ps = buildCommand(cmd, parametros);
     	try {
