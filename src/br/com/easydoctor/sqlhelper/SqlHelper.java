@@ -95,8 +95,10 @@ public class SqlHelper {
 				obj = (T)clazz.newInstance();
 		        ((IDao)obj).bind(result.get(0));
 	    	}
-		} catch (InstantiationException | IllegalAccessException e) {
+		} catch (InstantiationException e) {
 
+		}
+		catch (IllegalAccessException  e) {
 		}
 		return obj;
     }
@@ -195,10 +197,13 @@ public class SqlHelper {
             conexao = DriverManager.getConnection(url, login, senha);
 
         }
-        catch(ClassNotFoundException | SQLException e)
+        catch(ClassNotFoundException e)
         {
 
         }
+        catch (SQLException  e) {
+
+		}
     }
 
     private void fecharConexao()
