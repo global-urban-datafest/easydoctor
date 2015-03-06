@@ -193,7 +193,7 @@ public class SqlHelper {
     {
         try
         {
-            Class.forName("com.ibm.db2.jdbc.app.DB2Driver");
+            Class.forName("com.ibm.db2.jcc.DB2Driver");
             conexao = DriverManager.getConnection(url, login, senha);
 
         }

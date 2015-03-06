@@ -2,6 +2,8 @@ package br.com.easydoctor.dao;
 
 import br.com.easydoctor.bean.MedicoBean;
 import br.com.easydoctor.sqlhelper.SqlHelper;
+import br.com.easydoctor.sqlhelper.Parametro;
+
 
 public class MedicoDAO implements IBaseDao<Integer, MedicoBean> {
 
@@ -15,7 +17,16 @@ public class MedicoDAO implements IBaseDao<Integer, MedicoBean> {
 	public Integer insert(MedicoBean obj) {
 		String cmd = "INSERT INTO [MEDICO] ([ID] ,[CPF],[NOME],[AREA_ATUACAO],[NASCIMENTO])VALUES(?,?,?,?,?)";
 
-		return null;
+		Parametro[] param = {
+				new Parametro(1, obj.getId()),
+				new Parametro(2, obj.getCpf()),
+				new Parametro(3, obj.getNome()),
+				new Parametro(4, obj.getArea_atuacao()),
+				new Parametro(5, obj.getNascimento())
+		};
+
+		return helper.executeUpdate(cmd, param);
+
 	}
 
 

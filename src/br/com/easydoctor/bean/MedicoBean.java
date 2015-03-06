@@ -2,8 +2,11 @@ package br.com.easydoctor.bean;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
+import java.util.HashMap;
 
-public class MedicoBean {
+import br.com.easydoctor.sqlhelper.IDao;
+
+public class MedicoBean implements IDao{
 	private int id;
 	private String area_atuacao;
 	private BigDecimal cpf;
@@ -47,6 +50,11 @@ public class MedicoBean {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	@Override
+	public void bind(HashMap<String, Object> dados) {
+		// TODO Auto-generated method stub
+
 	}
 
 

@@ -2,8 +2,11 @@ package br.com.easydoctor.bean;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
+import java.util.HashMap;
 
-public class PacienteBean {
+import br.com.easydoctor.sqlhelper.IDao;
+
+public class PacienteBean implements IDao{
 
 	private int id;
 	private String ant_fam_fil;
@@ -156,6 +159,11 @@ public class PacienteBean {
 	}
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+	@Override
+	public void bind(HashMap<String, Object> dados) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

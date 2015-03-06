@@ -1,6 +1,10 @@
 package br.com.easydoctor.bean;
 
-public class ConsultaBean {
+import java.util.HashMap;
+
+import br.com.easydoctor.sqlhelper.IDao;
+
+public class ConsultaBean implements IDao {
 	private int id;
 	private String hist_preg_mol;
 	private String inter_div_apa;
@@ -65,6 +69,12 @@ public class ConsultaBean {
 
 	public void setQ_dura(String q_dura) {
 		this.q_dura = q_dura;
+	}
+
+	@Override
+	public void bind(HashMap<String, Object> dados) {
+		// TODO Auto-generated method stub
+
 	}
 
 

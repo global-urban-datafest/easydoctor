@@ -1,8 +1,11 @@
 package br.com.easydoctor.bean;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
-public class ReceitaBean {
+import br.com.easydoctor.sqlhelper.IDao;
+
+public class ReceitaBean implements IDao{
 
 	private int id;
 	private int consulta;
@@ -55,6 +58,11 @@ public class ReceitaBean {
 	}
 	public void setQuant_hora(String quant_hora) {
 		this.quant_hora = quant_hora;
+	}
+	@Override
+	public void bind(HashMap<String, Object> dados) {
+		// TODO Auto-generated method stub
+
 	}
 
 
