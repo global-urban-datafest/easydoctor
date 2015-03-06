@@ -6,14 +6,14 @@ package br.com.easydoctor.sqlhelper;
 
 /**
  *
- * @author rm66288
+ * @author André A. Matecki
  */
 public class Objeto<T> {
-    
+
     private T objeto;
 
     public Objeto() { }
-    
+
     public Objeto(T objeto) {
         this.objeto = objeto;
     }
@@ -25,6 +25,6 @@ public class Objeto<T> {
     public void setObjeto(T objeto) {
         this.objeto = objeto;
     }
-    
-    
+
+
 }

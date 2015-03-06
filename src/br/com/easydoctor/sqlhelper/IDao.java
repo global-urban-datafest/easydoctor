@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author rm66288
+ * @author André A. Matecki
  */
 public interface IDao {
     void bind(HashMap<String, Object> dados);

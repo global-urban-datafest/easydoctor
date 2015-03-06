@@ -7,10 +7,10 @@ package br.com.easydoctor.sqlhelper;
 
 /**
  *
- * @author AndrÃ©
+ * @author André A. Matecki
  */
 public class Parametro {
-    
+
     private Integer indexParametro;
     private Object parametro;
 
@@ -34,5 +34,5 @@ public class Parametro {
     public void setParametro(Object parametro) {
         this.parametro = parametro;
     }
-    
+
 }
