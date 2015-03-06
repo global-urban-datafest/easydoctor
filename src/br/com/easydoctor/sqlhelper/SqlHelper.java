@@ -142,7 +142,7 @@ public class SqlHelper {
 
 			while(rs.next()){
 
-				HashMap<String, Object> row = new HashMap<>();
+				HashMap<String, Object> row = new HashMap<String, Object>();
 				for(int i = 1; i <= rsmd.getColumnCount(); i++){
 					String nome = rsmd.getColumnName(i);
 					Object obj = rs.getObject(i);
